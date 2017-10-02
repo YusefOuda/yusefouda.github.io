@@ -56,6 +56,17 @@ header.site-header {
 	flex: 1 50%;
 }
 
+.footer-col-wrapper {
+	color: rgba(0, 0, 0, 0.54);
+}
+
+.site-footer {
+	box-shadow: 2px -5px 5px rgba(0,0,0,0.26);
+}
+
+.site-nav {
+	background-color: #3F51B5;
+}
 
 @media all and (max-width: 800px) {
   .home-container > div {
@@ -63,10 +74,14 @@ header.site-header {
   }
 }
 
-.footer-col-wrapper {
-	color: rgba(0, 0, 0, 0.54);
-}
+@media all and (max-width: 600px) {
+  .site-nav {
+    background-color: #fff;
+    box-shadow: 2px 5px 5px rgba(0,0,0,0.26);
+  }
 
-.site-footer {
-	box-shadow: 2px -5px 5px rgba(0,0,0,0.26);
+  .site-nav .page-link {
+  	color: rgba(0, 0, 0, 0.87);
+  	margin-left: 0;
+  }
 }

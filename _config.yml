@@ -18,7 +18,7 @@ email: yusef.ouda@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
   A personal website and blog for software developer Yusef Ouda.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yusefouda.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://yusefouda.com" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: YusefOuda
 github_username:  YusefOuda
 linkedin_username: YusefOuda

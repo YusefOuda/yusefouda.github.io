@@ -11,6 +11,10 @@ body {
 	 color: rgba(0, 0, 0, 0.87);
 }
 
+a, a:visited {
+	color: #ff4081;
+}
+
 header.site-header {
 	background-color: #3F51B5;
 }
@@ -55,10 +59,10 @@ header.site-header {
   }
 }
 
-a, a:visited {
-	color: #ff4081;
-}
-
 .footer-col-wrapper {
 	color: rgba(0, 0, 0, 0.54);
+}
+
+.site-footer {
+	box-shadow: 2px -5px 5px rgba(0,0,0,0.26);
 }

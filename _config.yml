@@ -23,6 +23,7 @@ url: "http://yusefouda.com" # the base hostname & protocol for your site, e.g. h
 github_username:  YusefOuda
 linkedin_username: YusefOuda
 repository: yusefouda/yusefouda.github.io
+google_analytics: UA-107164035-1
 
 # Build settings
 markdown: kramdown

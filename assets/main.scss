@@ -74,6 +74,11 @@ header.site-header {
   .home-container > div {
     flex: 1 100%;
   }
+
+  .headshot {
+  	display: block;
+  	margin: 0 auto;
+  }
 }
 
 @media all and (max-width: 600px) {

@@ -1,30 +1,49 @@
 window.onload = () => {
-    const P = "~";
-    let text = `${P}Hi there, ${P}my name is Yusef Ouda.${P}\n\nI am a software developer.${P}\n\nFind more info about me on `;
+    let text = `~Hi there, ~my name is Yusef Ouda.~\n\nI am a software developer.~\n\nFind more info about me on ~`;
     let i = 0;
-    printText(text, i);
+    let textNode = document.createTextNode("");
+    document.getElementById("container").insertBefore(textNode, document.getElementById("cursor"));
+    printText(text, textNode, i);
 
-    function printText(text,  i) {
+    function printText(text, node, i) {
         let delay = 90;
         const char = text[i];
-        if (char === P)
+        if (char === "~")
             delay = 750;
-        let ele = document.createElement("span");
-        ele.innerText = char;
+        node.innerText += char;
         setTimeout(() => {
-            if (char !== P)
-                document.getElementById("container").insertBefore(ele, document.getElementById("cursor"));
+            if (char === "\n") {
+                node = document.createTextNode("");
+                document.getElementById("container").insertBefore(document.createElement("br"), document.getElementById("cursor"));
+                document.getElementById("container").insertBefore(node, document.getElementById("cursor"));
+            }
+            else if (char !== "~")
+                node.nodeValue = node.nodeValue + char;
             if (++i < text.length)
-                printText(text, i);
+                printText(text, node, i);
             else
                 insertLink();
         }, delay);
     }
 
     function insertLink() {
+        let text = "Stack Overflow.";
         let ele = document.createElement("a");
         ele.href = "https://stackoverflow.com/cv/yusefouda";
-        ele.innerText = "Stack Overflow";
+        let i = 0;
         document.getElementById("container").insertBefore(ele, document.getElementById("cursor"));
+        printLink(text, ele, i);
+    }
+
+    function printLink(text, node, i) {
+        let delay = 90;
+        const char = text[i];
+        node.innerText += char;
+        setTimeout(() => {
+            node.nodeValue = node.nodeValue + char;
+
+            if (++i < text.length)
+                printLink(text, node, i);
+        }, delay);
     }
 }

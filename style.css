@@ -9,7 +9,7 @@ body {
     margin: 0;
     align-items: center;
     font-family: monospace;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 #cursor {
@@ -22,6 +22,7 @@ body {
 
 #container {
     text-align: center;
+    margin: 0 0.5em;
 }
 
 @keyframes blink {

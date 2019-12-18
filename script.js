@@ -1,9 +1,8 @@
 window.onload = () => {
     let text = `~Hi there, ~my name is Yusef Ouda.~\n\nI am a software developer.~\n\nFind more info about me on ~`;
-    let i = 0;
     let textNode = document.createTextNode("");
     document.getElementById("container").insertBefore(textNode, document.getElementById("cursor"));
-    printText(text, textNode, i);
+    printText(text, textNode, 0);
 
     function printText(text, node, i) {
         let delay = 90;
@@ -17,22 +16,22 @@ window.onload = () => {
                 document.getElementById("container").insertBefore(document.createElement("br"), document.getElementById("cursor"));
                 document.getElementById("container").insertBefore(node, document.getElementById("cursor"));
             }
-            else if (char !== "~")
+            else if (char !== "~") {
                 node.nodeValue = node.nodeValue + char;
-            if (++i < text.length)
+            } if (++i < text.length) {
                 printText(text, node, i);
-            else
+            } else {
                 insertLink();
+            }
         }, delay);
     }
 
     function insertLink() {
         let text = "Stack Overflow.";
-        let ele = document.createElement("a");
-        ele.href = "https://stackoverflow.com/cv/yusefouda";
-        let i = 0;
-        document.getElementById("container").insertBefore(ele, document.getElementById("cursor"));
-        printLink(text, ele, i);
+        let textNode = document.createElement("a");
+        textNode.href = "https://stackoverflow.com/cv/yusefouda";
+        document.getElementById("container").insertBefore(textNode, document.getElementById("cursor"));
+        printLink(text, textNode, 0);
     }
 
     function printLink(text, node, i) {

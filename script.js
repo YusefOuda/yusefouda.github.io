@@ -1,5 +1,5 @@
 window.onload = () => {
-    let text = `~Hi there, ~my name is Yusef Ouda.~\n\nI am a software developer.~\n\nFind more info about me on ~`;
+    let text = `~Hi there!~ My name is Yusef Ouda.~\n\nI am a software developer.~\n\nFind out more about me on `;
     let textNode = document.createTextNode("");
     document.getElementById("container").insertBefore(textNode, document.getElementById("cursor"));
     printText(text, textNode, 0);

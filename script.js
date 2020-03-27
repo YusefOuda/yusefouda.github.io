@@ -2,8 +2,8 @@ window.onload = () => {
     let text = `~Hi there!~ My name is Yusef Ouda.~\n\nI am a software developer.~\n\nFind out more about me on `;
     let textNode = document.createTextNode("");
     document.getElementById("container").insertBefore(textNode, document.getElementById("cursor"));
-    printText(text, textNode, 0);
     var skip = false;
+    printText(text, textNode, 0);
     
     window.addEventListener('click', function() {
         skip = true;
@@ -50,6 +50,8 @@ window.onload = () => {
 
             if (++i < text.length)
                 printLink(text, node, i);
+            else
+                document.getElementById("skip").style.visibility = "hidden";
         }, delay);
     }
 }

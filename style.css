@@ -4,12 +4,13 @@ html {
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     height: 100%;
     margin: 0;
     align-items: center;
     font-family: monospace;
-    font-size: 2.5em;
+    font-size: 2rem;
     background-color: black;
     color: white;
 }
@@ -25,6 +26,12 @@ body {
 #container {
     text-align: center;
     margin: 0 0.5em;
+}
+
+#skip {
+    position: fixed;
+    bottom: 0;
+    font-size: 1rem;
 }
 
 @keyframes blink {

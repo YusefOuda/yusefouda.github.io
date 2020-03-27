@@ -7,6 +7,7 @@ window.onload = () => {
     
     window.addEventListener('click', function() {
         skip = true;
+        document.getElementById("skip").style.visibility = "hidden";
     });
 
     function printText(text, node, i) {

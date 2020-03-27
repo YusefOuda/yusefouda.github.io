@@ -3,7 +3,7 @@ window.onload = () => {
     let textNode = document.createTextNode("");
     document.getElementById("container").insertBefore(textNode, document.getElementById("cursor"));
     printText(text, textNode, 0);
-    let skip = false;
+    var skip = false;
     
     window.addEventListener('click', function() {
         skip = true;

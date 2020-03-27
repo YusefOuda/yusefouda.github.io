@@ -3,12 +3,18 @@ window.onload = () => {
     let textNode = document.createTextNode("");
     document.getElementById("container").insertBefore(textNode, document.getElementById("cursor"));
     printText(text, textNode, 0);
+    let skip = false;
+    
+    window.addEventListener('click', function() {
+        skip = true;
+    });
 
     function printText(text, node, i) {
         let delay = 90;
         const char = text[i];
         if (char === "~")
             delay = 750;
+        if (skip) delay = delay / 10;
         node.innerText += char;
         setTimeout(() => {
             if (char === "\n") {
@@ -36,6 +42,7 @@ window.onload = () => {
 
     function printLink(text, node, i) {
         let delay = 90;
+        if (skip) delay = delay / 10;
         const char = text[i];
         node.innerText += char;
         setTimeout(() => {

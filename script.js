@@ -15,7 +15,7 @@ window.onload = () => {
         const char = text[i];
         if (char === "~")
             delay = 750;
-        if (skip) delay = delay / 10;
+        if (skip) delay = delay / 20;
         node.innerText += char;
         setTimeout(() => {
             if (char === "\n") {
@@ -43,7 +43,7 @@ window.onload = () => {
 
     function printLink(text, node, i) {
         let delay = 90;
-        if (skip) delay = delay / 10;
+        if (skip) delay = delay / 20;
         const char = text[i];
         node.innerText += char;
         setTimeout(() => {

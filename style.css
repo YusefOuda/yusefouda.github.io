@@ -11,8 +11,12 @@ body {
     align-items: center;
     font-family: monospace;
     font-size: 2rem;
-    background-color: black;
+    background-color: #0e0e0e;
     color: white;
+}
+
+a {
+    font-weight: bold;
 }
 
 #cursor {

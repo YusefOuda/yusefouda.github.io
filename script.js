@@ -11,10 +11,10 @@ window.onload = () => {
     });
 
     function printText(text, node, i) {
-        let delay = 90;
+        let delay = 75;
         const char = text[i];
         if (char === "~")
-            delay = 750;
+            delay = 600;
         if (skip) delay = delay / 20;
         node.innerText += char;
         setTimeout(() => {

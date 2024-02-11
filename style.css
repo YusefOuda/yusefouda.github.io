@@ -1,0 +1,58 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    align-items: center;
+    font-family: monospace;
+    font-size: 2rem;
+    background-color: #0e0e0e;
+    color: white;
+    background-image: linear-gradient(to bottom right, #000000, #161616);
+}
+
+a {
+    font-weight: bold;
+}
+
+#cursor {
+    display: inline;
+    animation-name: blink;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#container {
+    text-align: center;
+    margin: 0 0.5em;
+}
+
+#skip {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 1rem;
+}
+
+img {
+    border-radius: 50%;
+    max-width: 50%;
+    margin-bottom: 5rem;
+    border: 5px solid white
+}
+
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }

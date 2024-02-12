@@ -4,7 +4,8 @@ html {
 
 body {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     height: 100%;
     margin: 0;
@@ -26,10 +27,6 @@ body {
     img.headshot {
         border-color: black;
     }
-
-    a, a:visited, a:hover, a:active {
-        color: black;
-    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,14 +39,15 @@ body {
     img.headshot {
         border-color: white;
     }
-
-    a, a:visited, a:hover, a:active {
-        color: white;
-    }
 }
 
 a {
     font-weight: bold;
+    color: blue;
+}
+
+a:visited, a:hover, a:active {
+    color: blue;
 }
 
 #cursor {
@@ -63,6 +61,7 @@ a {
 #container {
     text-align: start;
     margin: 0 0.5em;
+    min-width: 200px;
 }
 
 #skip {

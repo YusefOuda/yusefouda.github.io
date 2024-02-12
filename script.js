@@ -33,9 +33,15 @@ window.onload = () => {
                 text = insertLink(text, i);
                 node = document.createTextNode("");
                 containerNode.insertBefore(node, cursorNode);
+            } else if (char === ">") {
+                let spanNode = document.createElement("span");
+                spanNode.innerText = char;
+                containerNode.insertBefore(spanNode, cursorNode);
+                node = document.createTextNode("");
+                containerNode.insertBefore(node, cursorNode);
             } else if (char !== "~") {
                 node.nodeValue = node.nodeValue + char;
-            }
+            } 
             
             if (++i < text.length) {
                 printText(text, node, i);

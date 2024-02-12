@@ -27,6 +27,10 @@ body {
     img.headshot {
         border-color: black;
     }
+
+    span {
+        color: green;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,6 +42,10 @@ body {
 
     img.headshot {
         border-color: white;
+    }
+
+    span {
+        color: greenyellow;
     }
 }
 

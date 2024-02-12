@@ -2,7 +2,7 @@ window.onload = () => {
     let text = `~Hi there! 👋~ My name is Yusef Ouda.~\n\nI am a software developer.~\n\nFind out more about me on [LinkedIn](https://linkedin.com/in/yusefouda) or [GitHub](https://github.com/YusefOuda).`;
     let textNode = document.createTextNode("");
     document.getElementById("container").insertBefore(textNode, document.getElementById("cursor"));
-    var skip = false;
+    let skip = false;
     printText(text, textNode, 0);
     
     window.addEventListener('click', function() {

@@ -10,27 +10,29 @@ window.onload = () => {
     let skip = false;
 
     printText(text, textNode, 0);
-    
-    window.addEventListener('click', function() {
+
+    window.addEventListener('click', function () {
         skip = true;
         skipNode.style.visibility = "hidden";
     });
 
-    function printText(text, node, i) {
-        let delay = 60;
+    async function printText(text, node, i) {
         const char = text[i];
-        if (char === "~")
-            delay = 500;
-        if (skip) delay = 0;
         node.innerText += char;
-        setTimeout(() => {
+
+        let delay = getRandomInt(30,110);
+        if (char === "~")
+            delay = getRandomInt(300,700);
+        if (skip) delay = 0;
+
+        await sleep(delay).then(async () => {
             if (char === "\n") {
                 node = document.createTextNode("");
                 containerNode.insertBefore(document.createElement("br"), cursorNode);
                 containerNode.insertBefore(node, cursorNode);
             }
             else if (char === "[") {
-                text = insertLink(text, i);
+                text = await insertLink(text, i, delay);
                 node = document.createTextNode("");
                 containerNode.insertBefore(node, cursorNode);
             } else if (char === ">") {
@@ -41,30 +43,47 @@ window.onload = () => {
                 containerNode.insertBefore(node, cursorNode);
             } else if (char !== "~") {
                 node.nodeValue = node.nodeValue + char;
-            } 
-            
+            }
+
             if (++i < text.length) {
                 printText(text, node, i);
             } else {
                 skipNode.click();
             }
-        }, delay);
+        });
     }
 
-    function insertLink(text, i) {
-        const start = i+1;
-        const end = text.substring(i+1).indexOf("]") + start;
+    async function insertLink(text, i, delay) {
+        let aNode = document.createElement("a");
+        aNode.target = "_blank";
+        containerNode.insertBefore(aNode, cursorNode);
+
+        const start = i + 1;
+        const end = text.substring(i + 1).indexOf("]") + start;
         const linkText = text.substring(start, end);
         const urlStart = text.indexOf("(", end) + 1;
         const urlEnd = text.indexOf(")", end);
         const linkUrl = text.substring(urlStart, urlEnd);
-        let aNode = document.createElement("a");
         aNode.href = linkUrl;
-        aNode.innerText = linkText;
-        aNode.target = "_blank";
-        containerNode.insertBefore(aNode, cursorNode);
-        text = text.replace(text.substring(start-1, urlEnd), "");
+        let j = 0;
+        while (j < linkText.length) {
+            const char = linkText[j];
+            await sleep(delay).then(() => {
+                aNode.innerText += char;
+            });
+            j++;
+        }
+        text = text.replace(text.substring(start - 1, urlEnd), "");
         return text;
     }
 
+    function sleep(time) {
+        return new Promise((resolve) => setTimeout(resolve, time));
+    }
+
+    function getRandomInt(min, max) {
+        const minCeiled = Math.ceil(min);
+        const maxFloored = Math.floor(max);
+        return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+    }
 }

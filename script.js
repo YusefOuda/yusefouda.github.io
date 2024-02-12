@@ -1,5 +1,5 @@
 window.onload = () => {
-    let text = `~Hi there! 👋~ My name is Yusef Ouda.~\n\nI am a software developer.~\n\nFind out more about me on [LinkedIn](https://linkedin.com/in/yusefouda) or [GitHub](https://github.com/YusefOuda).`;
+    let text = `~Hi there! 👋~ My name is Yusef Ouda.~\n~\n~I am a software developer.~\n~\n~Find out more about me on [LinkedIn](https://linkedin.com/in/yusefouda) or [GitHub](https://github.com/YusefOuda).`;
     let textNode = document.createTextNode("");
     document.getElementById("container").insertBefore(textNode, document.getElementById("cursor"));
     let skip = false;
@@ -11,10 +11,10 @@ window.onload = () => {
     });
 
     function printText(text, node, i) {
-        let delay = 65;
+        let delay = 50;
         const char = text[i];
         if (char === "~")
-            delay = 600;
+            delay = 400;
         if (skip) delay = 0;
         node.innerText += char;
         setTimeout(() => {

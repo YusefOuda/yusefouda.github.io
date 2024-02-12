@@ -1,5 +1,5 @@
 window.onload = () => {
-    let text = `~Hi there! 👋~ My name is Yusef Ouda.~\n~\n~I am a software developer.~\n~\n~Find out more about me on [LinkedIn](https://linkedin.com/in/yusefouda) or [GitHub](https://github.com/YusefOuda).`;
+    let text = `~Hi there! 👋~ My name is Yusef Ouda.~\n~\n~I am a software developer based in Austin, Texas.~\n~\n~Find out more about me on [LinkedIn](https://linkedin.com/in/yusefouda) or [GitHub](https://github.com/YusefOuda).`;
     let textNode = document.createTextNode("");
     document.getElementById("container").insertBefore(textNode, document.getElementById("cursor"));
     let skip = false;

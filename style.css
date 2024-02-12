@@ -37,7 +37,7 @@ a:active {
     }
 
     img.headshot {
-        border-color: black;
+        border-color: blue;
     }
 
     a,
@@ -57,7 +57,7 @@ a:active {
     }
 
     img.headshot {
-        border-color: white;
+        border-color: limegreen;
     }
 
     a,
@@ -96,10 +96,10 @@ a {
     text-align: center;
 }
 
-img.headshot {
+img {
     border-radius: 50%;
     max-width: 50%;
-    border: 5px solid black;
+    border: 3px solid blue;
 }
 
 @keyframes blink {

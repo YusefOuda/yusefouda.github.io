@@ -5,7 +5,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 100%;
     margin: 0;
     align-items: center;
@@ -13,7 +13,39 @@ body {
     font-size: 2rem;
     background-color: #0e0e0e;
     color: white;
-    background-image: linear-gradient(to bottom right, #000000, #161616);
+    background-image: linear-gradient(to bottom right, #0e0e0e, #161616);
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        color: black;
+        background-color: rgb(247, 247, 247);
+        background-image: linear-gradient(to bottom right, #ffffff, #cccccc);
+    }
+
+    img.headshot {
+        border-color: black;
+    }
+
+    a, a:visited, a:hover, a:active {
+        color: black;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: white;
+        background-color: #0e0e0e;
+        background-image: linear-gradient(to bottom right, #0e0e0e, #161616);
+    }
+
+    img.headshot {
+        border-color: white;
+    }
+
+    a, a:visited, a:hover, a:active {
+        color: white;
+    }
 }
 
 a {
@@ -29,7 +61,7 @@ a {
 }
 
 #container {
-    text-align: center;
+    text-align: start;
     margin: 0 0.5em;
 }
 
@@ -39,12 +71,12 @@ a {
     left: 0;
     right: 0;
     font-size: 1rem;
+    text-align: center;
 }
 
 img {
     border-radius: 50%;
     max-width: 50%;
-    margin-bottom: 5rem;
     border: 5px solid white
 }
 

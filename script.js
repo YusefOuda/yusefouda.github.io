@@ -17,10 +17,10 @@ window.onload = () => {
     });
 
     function printText(text, node, i) {
-        let delay = 50;
+        let delay = 60;
         const char = text[i];
         if (char === "~")
-            delay = 400;
+            delay = 500;
         if (skip) delay = 0;
         node.innerText += char;
         setTimeout(() => {

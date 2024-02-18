@@ -83,7 +83,7 @@ a {
 
 #container {
     text-align: start;
-    margin: 0 0.5em;
+    margin: 1rem;
     min-width: 200px;
 }
 
@@ -100,6 +100,7 @@ img {
     border-radius: 50%;
     max-width: 75%;
     border: 3px solid blue;
+    max-height: 40%;
 }
 
 @keyframes blink {

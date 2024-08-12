@@ -1,5 +1,5 @@
 window.onload = () => {
-    let text = `> ~Hi there! 👋~ My name is Yusef Ouda.~\n~\n> ~I am a software developer based in Austin, Texas.~\n~\n> ~Find out more about me on [LinkedIn](https://linkedin.com/in/yusefouda) or [contact me](mailto:contactme@yusefouda.com).`;
+    let text = `> ~Hi there! 👋~ My name is Yusef Ouda.~\n~\n> ~I am a software developer based in Austin, Texas.~\n~\n> ~Find out more about me on [LinkedIn](https://linkedin.com/in/yusefouda) or [contact me](mailto:contact@yusef.slmail.me).`;
     let textNode = document.createTextNode("");
 
     const containerNode = document.getElementById("container");

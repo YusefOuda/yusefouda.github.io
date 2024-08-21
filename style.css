@@ -86,6 +86,7 @@ a {
     margin: 1rem;
     min-width: 200px;
     align-self: center;
+    margin: 0 auto;
 }
 
 #skip {
@@ -107,6 +108,7 @@ img {
 main {
     display: flex;
     min-height: 40%;
+    min-width: 40%;
 }
 
 @keyframes blink {

@@ -11,7 +11,7 @@ body {
     margin: 0;
     align-items: center;
     font-family: monospace;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: black;
     background-color: #ffffff;
     background-image: linear-gradient(to bottom right, #ffffff, #c7c7c7);
@@ -85,6 +85,7 @@ a {
     text-align: start;
     margin: 1rem;
     min-width: 200px;
+    align-self: center;
 }
 
 #skip {
@@ -101,6 +102,11 @@ img {
     max-width: 75%;
     border: 3px solid blue;
     max-height: 40%;
+}
+
+main {
+    display: flex;
+    min-height: 40%;
 }
 
 @keyframes blink {

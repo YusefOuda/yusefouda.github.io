@@ -109,6 +109,7 @@ main {
     display: flex;
     min-height: 40%;
     min-width: 40%;
+    margin: 1rem;
 }
 
 @keyframes blink {

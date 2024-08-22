@@ -1,5 +1,5 @@
 window.onload = () => {
-    let text = `> ~Hi there! 👋~ My name is Yusef Ouda.~\n~\n> ~I am a software developer based in Austin, Texas.~\n~\n> ~Find out more about me on [GitHub](https://github.com/YusefOuda) or [contact me](mailto:contact@yusef.slmail.me).`;
+    let text = `> ~Hi there! 👋~ My name is |Yusef Ouda|.~\n~\n> ~I am a software developer based in $Austin, Texas$.~\n~\n> ~Find out more about me on [GitHub](https://github.com/YusefOuda) or [contact me](mailto:contact@yusef.slmail.me).`;
     let textNode = document.createTextNode("");
 
     const containerNode = document.getElementById("container");
@@ -8,6 +8,8 @@ window.onload = () => {
 
     containerNode.insertBefore(textNode, cursorNode);
     let skip = false;
+    let isStrong = false;
+    let isItalic = false;
 
     printText(text, textNode, 0);
 
@@ -18,11 +20,13 @@ window.onload = () => {
 
     async function printText(text, node, i) {
         const char = text[i];
-        node.innerText += char;
+        if (char !== "|" && char !== "$") {
+            node.innerText += char;
+        }
 
-        let delay = getRandomInt(30,110);
+        let delay = getRandomInt(30,120);
         if (char === "~")
-            delay = getRandomInt(300,700);
+            delay = getRandomInt(400,800);
         if (skip) delay = 0;
 
         await sleep(delay).then(async () => {
@@ -30,6 +34,28 @@ window.onload = () => {
                 node = document.createTextNode("");
                 containerNode.insertBefore(document.createElement("br"), cursorNode);
                 containerNode.insertBefore(node, cursorNode);
+            }
+            else if (char === "|") {
+                isStrong = !isStrong;
+                if (isStrong) {
+                    let strongNode = document.createElement("strong");
+                    containerNode.insertBefore(strongNode, cursorNode);
+                    node = strongNode;
+                } else {
+                    node = document.createTextNode("");
+                    containerNode.insertBefore(node, cursorNode);
+                }
+            }
+            else if (char === "$") {
+                isItalic = !isItalic;
+                if (isItalic) {
+                    let italicNode = document.createElement("em");
+                    containerNode.insertBefore(italicNode, cursorNode);
+                    node = italicNode;
+                } else {
+                    node = document.createTextNode("");
+                    containerNode.insertBefore(node, cursorNode);
+                }
             }
             else if (char === "[") {
                 text = await insertLink(text, i, delay);

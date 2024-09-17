@@ -17,7 +17,7 @@ body {
     background-image: linear-gradient(to bottom right, #ffffff, #c7c7c7);
 }
 
-img.headshot {
+img.profile {
     border-color: black;
 }
 
@@ -36,7 +36,7 @@ a:active {
         background-image: linear-gradient(to bottom right, #ffffff, #c7c7c7);
     }
 
-    img.headshot {
+    img.profile {
         border-color: blue;
     }
 
@@ -56,7 +56,7 @@ a:active {
         background-image: linear-gradient(to bottom right, #0e0e0e, #1a1a1a);
     }
 
-    img.headshot {
+    img.profile {
         border-color: limegreen;
     }
 

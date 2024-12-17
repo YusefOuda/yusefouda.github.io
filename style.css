@@ -14,7 +14,7 @@ body {
     font-size: 1.5rem;
     color: black;
     background-color: #ffffff;
-    background-image: linear-gradient(to bottom right, #ffffff, #c7c7c7);
+    background-image: linear-gradient(to right bottom, #ffffff, #e0dcfb, #bfbaf6, #9b99f1, #707aeb);
 }
 
 img.profile {
@@ -33,7 +33,7 @@ a:active {
     body {
         color: black;
         background-color: #ffffff;
-        background-image: linear-gradient(to bottom right, #ffffff, #c7c7c7);
+        background-image: linear-gradient(to right bottom, #ffffff, #e0dcfb, #bfbaf6, #9b99f1, #707aeb);
     }
 
     img.profile {
@@ -53,7 +53,7 @@ a:active {
     body {
         color: white;
         background-color: #0e0e0e;
-        background-image: linear-gradient(to bottom right, #0e0e0e, #1a1a1a);
+        background-image: linear-gradient(to right bottom, #000000, #17050f, #200b1e, #221130, #161a46);
     }
 
     img.profile {
